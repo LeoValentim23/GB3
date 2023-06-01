@@ -128,10 +128,10 @@ public class Menu {
             }
 
             System.out.println("Quantos graus Celsius?");
-            int celsius = scanner.nextInt();
+            int celsiuspro = scanner.nextInt();
             scanner.nextLine(); // Limpar o buffer
 
-            if (celsius > 10 && alimento == 1) {
+            if (celsiuspro > 10 && alimento == 1) {
                 System.out.println("Alimento aprovado.");
                 System.exit(0); // Finalizar o programa
             } else {

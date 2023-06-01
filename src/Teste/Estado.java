@@ -1,18 +1,21 @@
 package Teste;
 
 public class Estado {
-    private String estado;
-    private String maduro;
+    private String Plantar;
+    private String EmPreparo;
     private String Pronto;
 
-    public String getEstado() {
-        return estado;
-    }
+    public Estado (String Plantar, String EmPreparo , String Pronto) {
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+        this.Plantar = Plantar;
+        this.EmPreparo = EmPreparo;
+        this.Pronto = Pronto;
+
     }
 
 }
+
+
+
 
 

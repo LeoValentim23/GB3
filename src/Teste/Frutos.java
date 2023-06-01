@@ -1,17 +1,32 @@
 package Teste;
 
 public class Frutos {
-    private String nome;
+
     private String uva;
     private String alface;
     private String morango;
 
-    public String getNome() {
-        return nome;
+    public String getUva() {
+        return uva;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setUva(String Uva) {
+        this.uva = Uva;
+    }
+    public String getAlface() {
+        return alface;
+    }
+
+    public void setAlface(String newalface) {
+        this.alface = newalface;
+    }
+
+    public String getMorango() {
+        return morango;
+    }
+
+    public void setMorango(String Morango) {
+        this.morango = Morango;
     }
 }
 
