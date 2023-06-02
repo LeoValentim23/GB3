@@ -1,5 +1,10 @@
 package main;
 
+import teste.Alface;
+import teste.Alimento;
+import teste.Morango;
+import teste.Uva;
+
 import java.util.Scanner;
 
 public class Menu {
@@ -120,18 +125,34 @@ public class Menu {
             System.out.println("3. Alface");
             System.out.println("0. Voltar");
 
-            int alimento = scanner.nextInt();
+            int Seleçaoalimento = scanner.nextInt();
             scanner.nextLine(); // Limpar o buffer
 
-            if (alimento == 0) {
+            Alimento alimento = null;
+
+
+            if (Seleçaoalimento == 0) {
                 break; // Sair do loop interno e voltar ao menu principal
+            }
+
+            if (Seleçaoalimento == 1){
+                alimento = new Morango();
+            }
+
+            if (Seleçaoalimento == 2) {
+                alimento = new Uva();
+            }
+
+            if (Seleçaoalimento == 3) {
+                alimento = new Alface();
+
             }
 
             System.out.println("Quantos graus Celsius?");
             int celsiuspro = scanner.nextInt();
             scanner.nextLine(); // Limpar o buffer
 
-            if (celsiuspro > 10 && alimento == 1) {
+            if (celsiuspro > 10 && Seleçaoalimento == 1) {
                 System.out.println("Alimento aprovado.");
                 System.exit(0); // Finalizar o programa
             } else {
