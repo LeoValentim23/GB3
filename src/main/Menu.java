@@ -125,41 +125,35 @@ public class Menu {
             System.out.println("3. Alface");
             System.out.println("0. Voltar");
 
-            int Seleçaoalimento = scanner.nextInt();
+            int selecaoAlimento = scanner.nextInt();
             scanner.nextLine(); // Limpar o buffer
 
             Alimento alimento = null;
 
-
-            if (Seleçaoalimento == 0) {
+            if (selecaoAlimento == 0) {
                 break; // Sair do loop interno e voltar ao menu principal
             }
 
-            if (Seleçaoalimento == 1){
+            if (selecaoAlimento == 1) {
                 alimento = new Morango();
-            }
-
-            if (Seleçaoalimento == 2) {
+            } else if (selecaoAlimento == 2) {
                 alimento = new Uva();
-            }
-
-            if (Seleçaoalimento == 3) {
+            } else if (selecaoAlimento == 3) {
                 alimento = new Alface();
-
+            } else {
+                System.out.println("Opção inválida. Por favor, selecione uma opção válida.");
+                continue; // Continuar para a próxima iteração do loop
             }
 
             System.out.println("Quantos graus Celsius?");
-            int celsiuspro = scanner.nextInt();
+            int celsiusPro = scanner.nextInt();
             scanner.nextLine(); // Limpar o buffer
 
-            if (celsiuspro > 10 && Seleçaoalimento == 1) {
+            if (alimento.temperaturaAdequada(celsiusPro)) {
                 System.out.println("Alimento aprovado.");
-                System.exit(0); // Finalizar o programa
             } else {
                 System.out.println("Alimento NÃO aprovado.");
-                System.exit(0); // Finalizar o programa
             }
         }
     }
 }
-

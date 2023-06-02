@@ -1,9 +1,16 @@
 package teste;
 
-public class Alimento {
-    private Temperatura temperatura;
+public abstract class Alimento {
+    private String nome;
 
-    public boolean temperaturaAdequada(int celsiuspro) {
-        return temperatura.estaDentro (celsiuspro);
+    public Alimento(String nome) {
+        this.nome = nome;
+    }
+
+    public abstract boolean temperaturaAdequada(int temperatura);
+
+    public String getNome() {
+        return nome;
     }
 }
+
