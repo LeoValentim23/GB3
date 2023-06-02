@@ -1,11 +1,12 @@
 package main;
 
+import java.util.Scanner;
+import doaçao.DPessoa;
+import doaçao.DEmpresa;
 import teste.Alface;
 import teste.Alimento;
 import teste.Morango;
 import teste.Uva;
-
-import java.util.Scanner;
 
 public class Menu {
     public static void main(String[] args) {
@@ -61,7 +62,10 @@ public class Menu {
             double quantidade = scanner.nextDouble();
             scanner.nextLine(); // Limpar o buffer
 
-            System.out.println("Muito obrigado pela doação, " + nome + "!");
+            DPessoa doacaoPessoa = new DPessoa(nome, quantidade);
+
+            System.out.println("Muito obrigado pela doação, " + doacaoPessoa.getNome() + "!");
+            System.out.println("Quantidade doada: " + doacaoPessoa.getQuantidade());
         } else if (tipoDoacao == 2) {
             System.out.println("Digite o nome da empresa:");
             String nomeEmpresa = scanner.nextLine();
@@ -70,7 +74,10 @@ public class Menu {
             double quantidade = scanner.nextDouble();
             scanner.nextLine(); // Limpar o buffer
 
-            System.out.println("Muito obrigado pela doação da empresa " + nomeEmpresa + "!");
+            DEmpresa doacaoEmpresa = new DEmpresa(nomeEmpresa, quantidade);
+
+            System.out.println("Muito obrigado pela doação da empresa " + doacaoEmpresa.getNomeEmpresa() + "!");
+            System.out.println("Quantidade doada: " + doacaoEmpresa.getQuantidade());
         } else {
             System.out.println("Opção inválida. Por favor, selecione uma opção válida.");
         }
@@ -146,10 +153,10 @@ public class Menu {
             }
 
             System.out.println("Quantos graus Celsius?");
-            int celsiusPro = scanner.nextInt();
+            int celsius = scanner.nextInt();
             scanner.nextLine(); // Limpar o buffer
 
-            if (alimento.temperaturaAdequada(celsiusPro)) {
+            if (alimento.temperaturaAdequada(celsius)) {
                 System.out.println("Alimento aprovado.");
             } else {
                 System.out.println("Alimento NÃO aprovado.");
@@ -157,3 +164,4 @@ public class Menu {
         }
     }
 }
+
