@@ -23,7 +23,7 @@ public class Menu {
             System.out.println("0. Sair");
 
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpar o buffer
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1:
@@ -52,7 +52,7 @@ public class Menu {
         System.out.println("2. Empresa");
 
         int tipoDoacao = scanner.nextInt();
-        scanner.nextLine(); // Limpar o buffer
+        scanner.nextLine();
 
         if (tipoDoacao == 1) {
             System.out.println("Digite seu nome:");
@@ -60,7 +60,7 @@ public class Menu {
 
             System.out.println("Digite a quantidade que deseja doar:");
             double quantidade = scanner.nextDouble();
-            scanner.nextLine(); // Limpar o buffer
+            scanner.nextLine();
 
             DPessoa doacaoPessoa = new DPessoa(nome, quantidade);
 
@@ -72,7 +72,7 @@ public class Menu {
 
             System.out.println("Digite a quantidade que a empresa deseja doar:");
             double quantidade = scanner.nextDouble();
-            scanner.nextLine(); // Limpar o buffer
+            scanner.nextLine();
 
             DEmpresa doacaoEmpresa = new DEmpresa(nomeEmpresa, quantidade);
 
@@ -95,7 +95,7 @@ public class Menu {
             System.out.println("0. Sair");
 
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpar o buffer
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1:
@@ -133,12 +133,12 @@ public class Menu {
             System.out.println("0. Voltar");
 
             int selecaoAlimento = scanner.nextInt();
-            scanner.nextLine(); // Limpar o buffer
+            scanner.nextLine();
 
             Alimento alimento = null;
 
             if (selecaoAlimento == 0) {
-                break; // Sair do loop interno e voltar ao menu principal
+                break;
             }
 
             if (selecaoAlimento == 1) {
@@ -149,12 +149,12 @@ public class Menu {
                 alimento = new Alface();
             } else {
                 System.out.println("Opção inválida. Por favor, selecione uma opção válida.");
-                continue; // Continuar para a próxima iteração do loop
+                continue;
             }
 
             System.out.println("Quantos graus Celsius?");
             int celsius = scanner.nextInt();
-            scanner.nextLine(); // Limpar o buffer
+            scanner.nextLine();
 
             if (alimento.temperaturaAdequada(celsius)) {
                 System.out.println("Alimento aprovado.");
