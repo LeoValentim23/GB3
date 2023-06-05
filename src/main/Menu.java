@@ -13,10 +13,10 @@ public class Menu {
         Scanner scanner = new Scanner(System.in);
         int opcao;
 
-        System.out.println("Bem-vindo à ONG!");
+        System.out.println("Bem-vindo à Urnan farm! Espero que voce goste da experiencia com nossa comunidade .");
 
         while (true) {
-            System.out.println("Selecione o que você deseja:");
+            System.out.println("Selecione o que você deseja saber ou realizar:");
             System.out.println("1. Doação");
             System.out.println("2. Objetivos");
             System.out.println("3. Teste");
