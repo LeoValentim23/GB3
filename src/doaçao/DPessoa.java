@@ -12,7 +12,5 @@ public class DPessoa extends Doaçao {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+
 }

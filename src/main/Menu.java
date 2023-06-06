@@ -12,8 +12,9 @@ public class Menu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int opcao;
+        Aplicacao aplicacao = new Aplicacao();
 
-        System.out.println("Bem-vindo à Urnan farm! Espero que voce goste da experiencia com nossa comunidade .");
+        System.out.println("Bem-vindo à Urban farm! Espero que voce goste da experiencia com nossa comunidade .");
 
         while (true) {
             System.out.println("Selecione o que você deseja saber ou realizar:");
@@ -27,7 +28,7 @@ public class Menu {
 
             switch (opcao) {
                 case 1:
-                    realizarDoacao(scanner);
+                    aplicacao.realizarDoacao(scanner);
                     break;
                 case 2:
                     exibirObjetivos(scanner);
@@ -46,42 +47,7 @@ public class Menu {
         }
     }
 
-    public static void realizarDoacao(Scanner scanner) {
-        System.out.println("Selecione o tipo de doação:");
-        System.out.println("1. Pessoa");
-        System.out.println("2. Empresa");
 
-        int tipoDoacao = scanner.nextInt();
-        scanner.nextLine();
-
-        if (tipoDoacao == 1) {
-            System.out.println("Digite seu nome:");
-            String nome = scanner.nextLine();
-
-            System.out.println("Digite a quantidade que deseja doar:");
-            double quantidade = scanner.nextDouble();
-            scanner.nextLine();
-
-            DPessoa doacaoPessoa = new DPessoa(nome, quantidade);
-
-            System.out.println("Muito obrigado pela doação, " + doacaoPessoa.getNome() + "!");
-            System.out.println("Quantidade doada: " + doacaoPessoa.getQuantidade());
-        } else if (tipoDoacao == 2) {
-            System.out.println("Digite o nome da empresa:");
-            String nomeEmpresa = scanner.nextLine();
-
-            System.out.println("Digite a quantidade que a empresa deseja doar:");
-            double quantidade = scanner.nextDouble();
-            scanner.nextLine();
-
-            DEmpresa doacaoEmpresa = new DEmpresa(nomeEmpresa, quantidade);
-
-            System.out.println("Muito obrigado pela doação da empresa " + doacaoEmpresa.getNomeEmpresa() + "!");
-            System.out.println("Quantidade doada: " + doacaoEmpresa.getQuantidade());
-        } else {
-            System.out.println("Opção inválida. Por favor, selecione uma opção válida.");
-        }
-    }
 
     public static void exibirObjetivos(Scanner scanner) {
         int opcao;

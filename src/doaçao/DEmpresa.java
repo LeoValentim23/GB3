@@ -12,7 +12,5 @@ public class DEmpresa extends Doaçao {
         return nomeEmpresa;
     }
 
-    public void setNomeEmpresa(String nomeEmpresa) {
-        this.nomeEmpresa = nomeEmpresa;
-    }
+
 }

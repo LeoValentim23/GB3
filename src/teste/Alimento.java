@@ -9,8 +9,6 @@ public abstract class Alimento {
 
     public abstract boolean temperaturaAdequada(int temperatura);
 
-    public String getNome() {
-        return nome;
-    }
+
 }
 
